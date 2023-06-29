@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Office Information</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color: aliceblue;
+}
+
+.Offices_info{
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+  background-color:navy;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 20px;
+}
+
+.button { 
+  background-color: aliceblue; 
+  width: 100px;
+  color: navy;  
+  padding: 15px; 
+  margin: 10px 0px; 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 20px;
+  margin-left: 85%;
+} 
+
+</style>
+</head>
+<body>
+<h1 class="Offices_info">OFFICES
+  <a href="file:///C:/Users/ADMIN/Desktop/JOPRIZ/Eunice/contact.html"><button class="button"> Contact</button></a>
+</h1>
+
+<table>
+  <tr>
+    <th>Office Name</th>
+    <th>Size</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Westlands</td>
+    <td>150sqm</td>
+    <td>2M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Westlands">
+        <input type="hidden" name="size" value="150sqm">
+        <input type="hidden" name="price" value="2M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Upperhill</td>
+    <td>160sqm</td>
+    <td>2.5M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Upperhill">
+        <input type="hidden" name="size" value="160sqm">
+        <input type="hidden" name="price" value="2.5M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>University Way</td>
+    <td>175sqm</td>
+    <td>4M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="University Way">
+        <input type="hidden" name="size" value="175sqm">
+        <input type="hidden" name="price" value="4M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <!-- Add the remaining office data rows following the same structure -->
+  <tr>
+    <td>Thika Road</td>
+    <td>125sqm</td>
+    <td>1.5M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Thika Road">
+        <input type="hidden" name="size" value="125sqm">
+        <input type="hidden" name="price" value="1.5M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Ngong Road</td>
+    <td>150sqm</td>
+    <td>3M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Ngong Road">
+        <input type="hidden" name="size" value="150sqm">
+        <input type="hidden" name="price" value="3M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Mombasa Road</td>
+    <td>175sqm</td>
+    <td>5M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Mombasa Road">
+        <input type="hidden" name="size" value="175sqm">
+        <input type="hidden" name="price" value="5M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Lang'ata</td>
+    <td>160sqm</td>
+    <td>5M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Lang'ata">
+        <input type="hidden" name="size" value="160sqm">
+        <input type="hidden" name="price" value="5M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>CBD</td>
+    <td>170sqm</td>
+    <td>7M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="CBD">
+        <input type="hidden" name="size" value="170sqm">
+        <input type="hidden" name="price" value="7M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Lavington</td>
+    <td>175sqm</td>
+    <td>5M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Lavington">
+        <input type="hidden" name="size" value="175sqm">
+        <input type="hidden" name="price" value="5M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Karen</td>
+    <td>160sqm</td>
+    <td>5M</td>
+    <td>
+      <form name="f2" action="officeinfo.php" method="post">
+        <input type="hidden" name="office_name" value="Karen">
+        <input type="hidden" name="size" value="160sqm">
+        <input type="hidden" name="price" value="5M">
+        <input type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

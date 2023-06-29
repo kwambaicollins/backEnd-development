@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Information</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color:gold;
+}
+
+.homes_info {
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: black;
+  background-color:teal;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 20px;
+}
+
+.button { 
+  background-color:gold; 
+  width: 100px;
+  color:teal;  
+  padding: 15px; 
+  margin: 10px 0px; 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 20px;
+  margin-left: 85%;
+} 
+</style>
+</head>
+<body>
+<h1 class="homes_info">HOMES<a href="file:///C:/Users/ADMIN/Desktop/JOPRIZ/Eunice/contact.html"><button class="button"> Contact</button></a></h1>
+<table>
+  <tr>
+    <th>Home Name</th>
+    <th>Size</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Runda</td>
+    <td>5 bedroom</td>
+    <td>50M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Runda">
+        <input type="hidden" name="size" value="5 bedroom">
+        <input type="hidden" name="price" value="50M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Kitengela</td>
+    <td>3 bedroom</td>
+    <td>10M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Kitengela">
+        <input type="hidden" name="size" value="3 bedroom">
+        <input type="hidden" name="price" value="10M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Bluepost</td>
+    <td>4 bedroom</td>
+    <td>25M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Bluepost">
+        <input type="hidden" name="size" value="4 bedroom">
+        <input type="hidden" name="price" value="25M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Kiambu Road</td>
+    <td>3 bedroom</td>
+    <td>30M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Kiambu Road">
+        <input type="hidden" name="size" value="3 bedroom">
+        <input type="hidden" name="price" value="30M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Kiserian</td>
+    <td>4 bedroom</td>
+    <td>28M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Kiserian">
+        <input type="hidden" name="size" value="4 bedroom">
+        <input type="hidden" name="price" value="28M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Ruaka</td>
+    <td>2 bedroom</td>
+    <td>8M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Ruaka">
+        <input type="hidden" name="size" value="2 bedroom">
+        <input type="hidden" name="price" value="8M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Mwihoko</td>
+    <td>3 bedroom</td>
+    <td>25M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Mwihoko">
+        <input type="hidden" name="size" value="3 bedroom">
+        <input type="hidden" name="price" value="25M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Lower Kabete</td>
+    <td>5 bedroom</td>
+    <td>40M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Lower Kabete">
+        <input type="hidden" name="size" value="5 bedroom">
+        <input type="hidden" name="price" value="40M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Delmonte</td>
+    <td>6 bedroom</td>
+    <td>60M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Delmonte">
+        <input type="hidden" name="size" value="6 bedroom">
+        <input type="hidden" name="price" value="60M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+  <tr>
+    <td>Buruburu</td>
+    <td>3 bedroom</td>
+    <td>25M</td>
+    <td>
+      <form name="f2" action="homesinfo.php" method="post">
+        <input type="hidden" name="home_name" value="Buruburu">
+        <input type="hidden" name="size" value="3 bedroom">
+        <input type="hidden" name="price" value="25M">
+        <input id="select" type="submit" name="select" value="select">
+      </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

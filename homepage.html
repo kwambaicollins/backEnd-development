@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: content-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+  height: auto;
+}
+
+.container img {
+    vertical-align: middle;
+    height: 510px;
+    width: auto;
+
+}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+.header {
+    padding: 5px;
+    text-align: left;
+    background: #010035;
+    color: white;
+    font-size: 20px;
+}
+.button {
+    background-color:#d4af37;
+    border: none;
+    color: #010035;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: solid;
+    display: inline-flexbox;
+    margin:2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+.header{
+    background-color: midnightblue;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.login-logout{
+    margin-left: auto;
+    
+ }
+
+</style>
+</head>
+<body>
+    <header class = "header">
+        <img src = "images\final logo.jpg" alt="logo"class="logo">
+        <h1 class="company_name">JOPRIZ LIMITED</h1>
+        <div class = "login-logout">
+            <a href="file:///C:/xampp/htdocs/signup.html"><button class="button">Sign Up</button></a>
+            <a href="file:///C:/xampp/htdocs/loginpro.html"><button class="button">Sign In</button></a>
+        </div>
+    </header> 
+<div class="container">
+        <img src="images\red image.jpg" alt="red house" style="width:100%;">      
+    <div class="content">
+        <h1>Jopriz Limited</h1>
+        <p>Jopriz limited is a credible company that has for many years enabled many to become owners. <br> We make it easy!<br>Log in to find out more about our products and become an owner today!</p>
+    </div>
+</div>
+
+</body>
+</html>

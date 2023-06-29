@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    background-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 10%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img {
+    margin-bottom: -4px;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.just_text {
+    color: navy;
+    text-align: center;
+    text-decoration: solid;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.question {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buy-button,
+.book-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+</style>
+
+<body>
+
+<h2 class="question">Which office image do you prefer?</h2>
+
+<div class="row">
+  <div class="column">
+    <div class="image-container">
+      <img src="images/office1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      <button class="buy-button" onclick="buy()">Buy</button>
+      <button class="book-button" onclick="book()">Book</button>
+    </div>
+  </div>
+  <div class="column">
+    <div class="image-container">
+      <img src="images/office2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      <button class="buy-button" onclick="buy()">Buy</button>
+      <button class="book-button" onclick="book()">Book</button>
+    </div>
+  </div>
+  <div class="column">
+    <div class="image-container">
+      <img src="images/office3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      <button class="buy-button" onclick="buy()">Buy</button>
+      <button class="book-button" onclick="book()">Book</button>
+    </div>
+  </div>
+  <div class="column">
+    <div class="image-container">
+      <img src="images/office4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+      <button class="buy-button" onclick="buy()">Buy</button>
+      <button class="book-button" onclick="book()">Book</button>
+    </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/office1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/office2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/office3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/office4.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src="images/office1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Office 1">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/office2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Office 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/office3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Office 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/office4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Office 4">
+    </div>
+  </div>
+</div>
+
+<script>
+let modal = document.getElementById("myModal");
+let slides = document.getElementsByClassName("mySlides");
+let captionText = document.getElementById("caption");
+let buyButtons = document.getElementsByClassName("buy-button");
+let bookButtons = document.getElementsByClassName("book-button");
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+  captionText.innerHTML = slides[slideIndex - 1].querySelector("img").alt;
+
+  // Hide all buy buttons except for the current slide
+  for (i = 0; i < buyButtons.length; i++) {
+    buyButtons[i].style.display = "none";
+  }
+  buyButtons[slideIndex - 1].style.display = "block";
+
+  // Hide all book buttons except for the current slide
+  for (i = 0; i < bookButtons.length; i++) {
+    bookButtons[i].style.display = "none";
+  }
+  bookButtons[slideIndex - 1].style.display = "block";
+}
+
+function buy() {
+  let currentImage = slides[slideIndex - 1].querySelector("img").src;
+  // Implement the logic for buying the image here
+  // You can use the 'currentImage' variable to get the source of the current image
+  console.log("Buy button clicked for image: " + currentImage);
+}
+
+function book() {
+  let currentImage = slides[slideIndex - 1].querySelector("img").src;
+  // Implement the logic for booking the image here
+  // You can use the 'currentImage' variable to get the source of the current image
+  console.log("Book button clicked for image: " + currentImage);
+}
+</script>
+
+</body>
+</html>
